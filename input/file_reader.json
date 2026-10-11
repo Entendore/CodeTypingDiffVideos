@@ -1,0 +1,5 @@
+{
+    "name": "File Reader",
+    "junior": "def read_lines(filename):\n    lines = []\n    f = open(filename, 'r')\n    try:\n        for line in f:\n            lines.append(line.strip())\n    finally:\n        f.close()\n    return lines\n",
+    "senior": "from pathlib import Path\n\ndef read_lines(filename: str) -> list[str]:\n    \"\"\"Safely read lines from a file using a context manager.\"\"\"\n    return Path(filename).read_text().splitlines()\n"
+}

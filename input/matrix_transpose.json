@@ -1,0 +1,5 @@
+{
+    "name": "Matrix Transpose",
+    "junior": "def transpose(matrix):\n    # Get dimensions\n    rows = len(matrix)\n    cols = len(matrix[0])\n    # Create a new empty matrix\n    transposed = []\n    for c in range(cols):\n        new_row = []\n        for r in range(rows):\n            new_row.append(matrix[r][c])\n        transposed.append(new_row)\n    return transposed\n\nmat = [[1, 2, 3], [4, 5, 6]]\nprint(transpose(mat))\n",
+    "senior": "def transpose(matrix: list[list[int]]) -> list[list[int]]:\n    \"\"\"Transpose a 2D matrix using zip.\"\"\"\n    return [list(row) for row in zip(*matrix)]\n\nprint(transpose([[1, 2, 3], [4, 5, 6]]))\n"
+}

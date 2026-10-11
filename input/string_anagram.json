@@ -1,0 +1,5 @@
+{
+    "name": "String Anagram",
+    "junior": "def is_anagram(str1, str2):\n    # Remove spaces and make lowercase\n    s1 = str1.replace(\" \", \"\").lower()\n    s2 = str2.replace(\" \", \"\").lower()\n    # Sort the characters and compare\n    return sorted(s1) == sorted(s2)\n\nprint(is_anagram(\"Listen\", \"Silent\"))\n",
+    "senior": "from collections import Counter\n\ndef is_anagram(s1: str, s2: str) -> bool:\n    \"\"\"Check if two strings are anagrams using character frequency counts.\"\"\"\n    return Counter(s1.replace(\" \", \"\").lower()) == Counter(s2.replace(\" \", \"\").lower())\n\nprint(is_anagram(\"Listen\", \"Silent\"))\n"
+}
